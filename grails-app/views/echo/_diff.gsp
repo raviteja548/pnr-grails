@@ -15,6 +15,7 @@
                             <th><g:message code="pnrdata.trainNo.label" default="Train Name" /></th>
                             <th><g:message code="pnrdata.trainNo.label" default="Train Number" /></th>
                             <th><g:message code="pnrdata.trainNo.label" default="Date Of Journey" /></th>
+                            <th><g:message code="pnrdata.trainNo.label" default="Chart Prepared" /></th>
                             
                         </tr>
                     </thead>
@@ -24,6 +25,7 @@
                             <td>${fieldValue(bean: mInstance, field: "trainName")}</td>
                             <td>${fieldValue(bean: mInstance, field: "trainNo")}</td>
                             <td>${fieldValue(bean: mInstance, field: "doj")}</td>
+                            <td>${fieldValue(bean: mInstance, field: "chartPrepared")}</td>
                         </tr>
                         <tr>
                             <td><b>From Station</b></td><td>${fieldValue(bean: mInstance, field: "fromStation")}</td>
@@ -32,10 +34,6 @@
                         <tr>
                         	<td><b>Boarding Point</b></td><td>${fieldValue(bean: mInstance, field: "boardCode")}</td>
                              <td><b>Class</b></td><td>${fieldValue(bean: mInstance, field: "cls")}</td>
-                        </tr>
-                         <tr>
-                        	<td><b>Chart Prepared</b></td><td>${fieldValue(bean: mInstance, field: "chartPrepared")}</td>
-                          
                         </tr>
                         <tr>
                         	<td><b>Reservation UpTo Code</b></td><td>${fieldValue(bean: mInstance, field: "resupCode")}</td>
