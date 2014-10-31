@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Simple Ajax</title>
+    <title>Welcome PNR Status</title>
     <g:javascript library="jquery"/>
     <style>
     #echoBox {
