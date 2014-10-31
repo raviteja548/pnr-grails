@@ -97,7 +97,7 @@ class EchoController {
     def  String getPnrResponse(String pnr,String pnrHmac) {
 		String apiKey="your pub api key";
         //More validations can be added like format is one of xml or json.
-        String endpoint = "http://railpnrapi.com/test/check_pnr/pnr/"+pnr+"/format/xml/pbapikey/"+apiKey+"/pbapisign/"+pnrHmac;
+        String endpoint = "http://railpnrapi.com/api/check_pnr/pnr/"+pnr+"/format/xml/pbapikey/"+apiKey+"/pbapisign/"+pnrHmac;
 
         log.info("=============is endpoint"+endpoint);
         System.out.println("=============is endpoint"+endpoint);
