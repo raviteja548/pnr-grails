@@ -14,7 +14,7 @@
 
 
 
-<div style="border: 2px solid #32CD32;padding: 10px 10px;background: #FFFFF0;width: 220px;border-radius: 15px; font-family: Lucida Grande">
+<div style="border: 2px solid #abbf78;padding: 10px 10px;background: #FFFFF0;width: 220px;border-radius: 15px; font-family: Lucida Grande">
 
 <b>&#8608;</b>Please Enter 10 Digit pnr<br>
 <b>&#8608;</b>Sample pnr:4100979246<br>

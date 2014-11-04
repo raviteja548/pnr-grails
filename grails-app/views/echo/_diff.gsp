@@ -7,7 +7,7 @@
 
 		    <g:if test="${searchresults}">
        <br/>
-       <h3>Search Results</h3>
+%{--       <h3>Search Results</h3>--}%
         <div class="list">
                 <table>
                     <thead>
@@ -49,7 +49,7 @@
                 --%>
                  <g:if test="${sr}">
        <br/>
-       <h3>Passengers List</h3>
+      <center> <h3 style="color:#abbf78"></h3></center>
         <div class="list">
                 <table>
                     <thead>
