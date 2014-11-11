@@ -13,22 +13,42 @@
 <body>
 
 
+<div class="ui-grid-a ui-responsive">
+    <div class="ui-block-a" style="float:left;">
+        <div class="ui-body ui-body-d" style="border:none">
+            <div style="border: 2px solid #abbf78;padding: 10px 10px;background: #FFFFF0;width: 220px;border-radius: 15px; font-family: Lucida Grande;float: left;">
 
-<div style="border: 2px solid #abbf78;padding: 10px 10px;background: #FFFFF0;width: 220px;border-radius: 15px; font-family: Lucida Grande">
+                <b>&#8608;</b>Please Enter 10 Digit pnr<br>
+                <b>&#8608;</b>Sample pnr:4100979246<br>
+                <b>&#8608;</b>Wait for a while to see result
+                <b>&#8608;</b>Like us if you love it
 
-<b>&#8608;</b>Please Enter 10 Digit pnr<br>
-<b>&#8608;</b>Sample pnr:4100979246<br>
-<b>&#8608;</b>Wait for a while to see result
-<b>&#8608;</b>Like us if you love it
 
-<br>
+            </div>
+        </div>
+    </div>
+    <div class="ui-block-b">
+        <div class="ui-body ui-body-d" style="border: none">
+            <div style="float:right;border: 2px solid #abbf78;padding: 0px;">
+                <iframe src="//www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/Programmerworks/799070020131801&width=292&height=258&colorscheme=light&show_faces=true&border_color&stream=false&header=false&" style="border:none; overflow:hidden; width:242px; height:205px;" >
+                </iframe>
+            </div>
+        </div>
+    </div>
 </div>
-</br>
-%{--<div>
-<div style="float: left">--}%
-<g:remoteField maxlength="10" controller="echo"  action="checkpnr" update="results" name="rf" onLoading="showSpinner(true);" onComplete="showSpinner(false);"/>
+<div style="clear: both;"></div>
+
+%{--<g:remoteField maxlength="10" controller="echo"  action="checkpnr" update="results" name="rf" onLoading="showSpinner(true);" onComplete="showSpinner(false);"/>--}%
+
+<g:formRemote name="a" url="[controller:'echo',action:'checkpnr']" update="results" onLoading="showSpinner(true);" onComplete="showSpinner(false);">
+    <g:textField  type="text" name="rf"/>
+    <g:submitButton name="submit" value="Check PNR"/>
+</g:formRemote>
+
+
+
 %{--</div>--}%
-<div class="bouncer" style="color: #abbf78;left: 210px;top:-21px;"><h3>&#8678;Enter your PNR</h3></div>
+%{--<div class="bouncer" style="color: #abbf78;left: 210px;top:-21px;"><h3>&#8678;Enter your PNR</h3></div>--}%
 %{--</div>--}%
 <div style="clear: both;"></div>
 <div id="results">

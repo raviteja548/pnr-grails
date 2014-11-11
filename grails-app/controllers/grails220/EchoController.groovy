@@ -16,9 +16,10 @@ class EchoController {
     }
 
 
-    def checkpnr(){
+    def checkpnr(String rf){
         PnrData data = new PnrData();
-        def message = params.value;
+        //def message = params.value;
+        def message = rf;
         String isParsed = null;
 
         if(message.trim().length() == 10){
@@ -73,7 +74,7 @@ class EchoController {
 
     def String getHmac(String pnr){
         String mykey = "your secret key";
-		String pubapiKey ="your pub api key"
+        String pubapiKey ="your pub api key"
         String test = "json"+pubapiKey+pnr;
         StringBuffer sb = new StringBuffer();
         try {
@@ -95,7 +96,7 @@ class EchoController {
     }
 
     def  String getPnrResponse(String pnr,String pnrHmac) {
-		String apiKey="your pub api key";
+			String apiKey="your pub api key";
         //More validations can be added like format is one of xml or json.
         String endpoint = "http://railpnrapi.com/api/check_pnr/pnr/"+pnr+"/format/xml/pbapikey/"+apiKey+"/pbapisign/"+pnrHmac;
 
