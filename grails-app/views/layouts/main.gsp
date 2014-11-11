@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bouncearrow.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'jqcss.css')}" type="text/css">
     <g:layoutHead/>
     <g:javascript library="application"/>
     <r:layoutResources />
@@ -35,19 +36,14 @@
 
 
     </g:javascript>
+
 </head>
 <body>
 <div>
 <div id="grailsLogo" role="banner"><div style="float: left;"><a href="http://programmerworks.blogspot.in/"><img src="${resource(dir: 'images', file: 'train.gif')}" alt="programmerworks" height="80px" width="100px"/></a></div>
     <div style="float: left; margin-top: 55px; "><h2>CHECK PNR STATUS</h2></div>
     <div style="clear: both;"></div></div>
-    %{--<div id="grailsLogo" role="banner" style="height: 80px">PNR STATUS</div>--}%
-<div style="float: right;border: 2px solid #abbf78">
-    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FProgrammerworks%2F799070020131801&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=841354282549502" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowtransparency="true"></iframe>
-    </br>
-    <a href="https://twitter.com/adroitraviteja" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @adroitraviteja</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div>
+
 </div>
 
 <g:layoutBody/>
