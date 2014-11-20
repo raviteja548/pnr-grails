@@ -13,30 +13,32 @@
 <body>
 
 
-<div class="ui-grid-a ui-responsive">
-    <div class="ui-block-a" style="float:left;">
-        <div class="ui-body ui-body-d" style="border:none">
-            <div style="border: 2px solid #abbf78;padding: 10px 10px;background: #FFFFF0;width: 220px;border-radius: 15px; font-family: Lucida Grande;float: left;">
 
-                <b>&#8608;</b>Please Enter 10 Digit pnr<br>
-                <b>&#8608;</b>Sample pnr:4100979246<br>
-                <b>&#8608;</b>Wait for a while to see result
-                <b>&#8608;</b>Like us if you love it
+<!-- Bootstrap start  -->
 
+<div class="row">
+    <div class="col-md-9" style="padding-top: 10px;">
+        <div style="border: 1px solid #abbf78;padding: 10px 10px;background: #FFFFF0;width: 245px;border-radius: 0px; font-family: Lucida Grande;float: left;">
 
-            </div>
+            <b>&#8608;</b>Please Enter 10 Digit pnr<br/>
+            <b>&#8608;</b>Sample pnr:4100979246<br/>
+            <b>&#8608;</b>Wait for a while to see result<br/>
+            <b>&#8608;</b>Like us if you love it
         </div>
     </div>
-    <div class="ui-block-b">
-        <div class="ui-body ui-body-d" style="border: none">
-            <div style="float:right;border: 2px solid #abbf78;padding: 0px;">
-                <iframe src="//www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/Programmerworks/799070020131801&width=292&height=258&colorscheme=light&show_faces=true&border_color&stream=false&header=false&" style="border:none; overflow:hidden; width:242px; height:205px;" >
-                </iframe>
-            </div>
+
+    <div class="col-md-3" style="float:left;padding-top: 10px">
+        <div style="float:right;border: 1px solid #abbf78;padding: 0px;">
+            <iframe src="//www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/Programmerworks/799070020131801&width=292&height=258&colorscheme=light&show_faces=true&border_color&stream=false&header=false&" style="border:none; overflow:hidden; width:242px; height:205px;" >
+            </iframe>
         </div>
     </div>
 </div>
-<div style="clear: both;"></div>
+
+
+<!-- Bootstrap End -->
+
+
 
 %{--<g:remoteField maxlength="10" controller="echo"  action="checkpnr" update="results" name="rf" onLoading="showSpinner(true);" onComplete="showSpinner(false);"/>--}%
 
