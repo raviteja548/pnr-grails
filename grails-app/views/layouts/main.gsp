@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bouncearrow.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'jqcss.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css">
+
     <g:layoutHead/>
     <g:javascript library="application"/>
     <r:layoutResources />
@@ -40,8 +41,10 @@
 </head>
 <body>
 <div>
-<div id="grailsLogo" role="banner"><div style="float: left;"><a href="http://programmerworks.blogspot.in/"><img src="${resource(dir: 'images', file: 'train.gif')}" alt="programmerworks" height="80px" width="100px"/></a></div>
-    <div style="float: left; margin-top: 55px; "><h2>CHECK PNR STATUS</h2></div>
+<div class="page-header" role="banner">
+    <div style="float: left;"><a href="http://programmerworks.blogspot.in/"><img src="${resource(dir: 'images', file: 'train.gif')}" alt="programmerworks" height="80px" width="100px"/></a>
+    </div>
+    <div style="float: left; margin-top: 18px; "><h2>CHECK PNR STATUS</h2></div>
     <div style="clear: both;"></div></div>
 
 </div>
