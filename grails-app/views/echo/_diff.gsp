@@ -1,25 +1,27 @@
 <g:if test="${parsed == 'YES'}">
 	
 <g:if test="${er}">
-<h3>${er}</h3>
+    <div class="alert alert-danger" role="alert"><h3>${er}</h3></div>
+
 </g:if>
 <g:else>
 
 		    <g:if test="${searchresults}">
        <br/>
 %{--       <h3>Search Results</h3>--}%
+
         <div class="list">
-                <table>
+                <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th><g:message code="pnrdata.trainNo.label" default="Train Name" /></th>
-                            <th><g:message code="pnrdata.trainNo.label" default="Train Number" /></th>
-                            <th><g:message code="pnrdata.trainNo.label" default="Date Of Journey" /></th>
-                            <th><g:message code="pnrdata.trainNo.label" default="Chart Prepared" /></th>
+                            <th>Train Name</th>
+                            <th>Train Number</th>
+                            <th>Date Of Journey</th>
+                            <th>Chart Prepared</th>
                             
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-striped">
                     <g:each in="${searchresults}" status="i" var="mInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                             <td>${fieldValue(bean: mInstance, field: "trainName")}</td>
@@ -51,13 +53,12 @@
        <br/>
       <center> <h3 style="color:#abbf78"></h3></center>
         <div class="list">
-                <table>
+                <table class="table table-striped">
                     <thead>
                         <tr>
-                            <g:sortableColumn property="Isbn" title="${message(code: 'pnrdata.responseCode.label', default: 'SNO')}" />
-                            <g:sortableColumn property="Title" title="${message(code: 'pnrdata.trainName.label', default: 'Booking Status')}" />
-                            <th><g:message code="pnrdata.trainNo.label" default="Current Status" /></th>
-                            
+                            <th>SNO</th>
+                            <th>Booking Status</th>
+                            <th>Current Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,6 +89,6 @@
 </g:if>
 
 <g:else>
-<h4>Enter complete pnr in a valid format</h4>
+<div class="alert alert-warning" role="alert">Enter complete pnr in a valid format</div>
 </g:else>
 
