@@ -1,0 +1,238 @@
+@media screen and (min-width:980px) {
+
+}
+
+@media screen and (min-width:768px) and (max-width:979px) {
+
+}
+
+@media screen and (min-width:360px)  and (max-width:767px) {
+
+
+
+    .divbox{
+        margin: 10px auto;
+        margin-left:1%;
+    }
+
+    .tf {
+        background: transparent;
+        background: rgba(163, 135, 106, 0.15);
+        background-clip: padding-box;
+
+        border: none;
+        border-radius:         26px;
+        -moz-border-radius:    26px;
+        -o-border-radius:      26px;
+        -webkit-border-radius: 26px;
+
+        box-shadow:         inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -moz-box-shadow:    inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -o-box-shadow:      inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+
+        color: #333;
+        height: 40px;
+        margin: 137px -90px 30px 40px;
+        outline: none;
+        padding: 0 20px 0 35px;
+
+        transition:         all .1s linear;
+        -moz-transition:    all .1s linear;
+        -o-transition:      all .1s linear;
+        -webkit-transition: all .1s linear;
+
+        width: 230px;
+    }
+
+
+    .bs {
+
+        height: 30px;
+        left: 100px;
+        position: relative;
+        font-size:10px;
+        top: -3px;
+        width: 40px;
+    }
+    .tabpos{
+        width:80%;
+        margin-left:8%;
+        color:white;
+
+    }
+
+
+}
+
+
+
+@media screen and (min-width:320px)  and (max-width:359px) {
+
+
+    .divbox{
+        margin: 10px auto;
+        margin-left:1%;
+    }
+
+    .tf {
+        background: transparent;
+        background: rgba(163, 135, 106, 0.15);
+        background-clip: padding-box;
+
+        border: none;
+        border-radius:         26px;
+        -moz-border-radius:    26px;
+        -o-border-radius:      26px;
+        -webkit-border-radius: 26px;
+
+        box-shadow:         inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -moz-box-shadow:    inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -o-box-shadow:      inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+
+        color: #333;
+        height: 40px;
+        margin: 80px -90px 10px 15px;
+        outline: none;
+        padding: 0 20px 0 35px;
+
+        transition:         all .1s linear;
+        -moz-transition:    all .1s linear;
+        -o-transition:      all .1s linear;
+        -webkit-transition: all .1s linear;
+
+        width: 230px;
+    }
+
+
+    .bs {
+
+        height: 30px;
+        left: 100px;
+        position: relative;
+        font-size:10px;
+        top: -3px;
+        width: 40px;
+    }
+
+    .tabpos{
+        width:80%;
+        margin-left:8%;
+        color:white;
+
+    }
+}
+
+
+@media screen and (min-width:1280px) and (max-width:1919px) {
+
+    .tabpos{
+        width:80%;
+        margin-left:8%;
+        color:white;
+
+    }
+
+
+    .tf {
+        background: transparent;
+        background: rgba(163, 135, 106, 0.15);
+        background-clip: padding-box;
+
+        border: none;
+        border-radius:         26px;
+        -moz-border-radius:    26px;
+        -o-border-radius:      26px;
+        -webkit-border-radius: 26px;
+
+        box-shadow:         inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -moz-box-shadow:    inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -o-box-shadow:      inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.3);
+
+        color: #333;
+        height: 40px;
+        margin: 90px 80px 0 80px;
+        outline: none;
+        padding: 0 20px 0 35px;
+
+        transition:         all .1s linear;
+        -moz-transition:    all .1s linear;
+        -o-transition:      all .1s linear;
+        -webkit-transition: all .1s linear;
+
+        width: 250px;
+    }
+
+
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+
+
+@media (min-width:981px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:320px) {
+
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+@media all and (device-width: 360px) and (device-height:640px ) and (orientation:portrait) {
+
+}
+@media all and (device-width: 640px) and (device-height:360px ) and (orientation:portrait) {
+
+}
+
+@media all and (device-width: 480px) and (device-height:320px ) and (orientation:portrait) {
+
+}
+
+@media all and (device-width: 320px) and (device-height:480px ) and (orientation:portrait) {
+
+}
