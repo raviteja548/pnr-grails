@@ -11,14 +11,19 @@
 %{--       <h3>Search Results</h3>--}%
 
         <div class="list">
-                <table class="table table-striped table-bordered">
+                <table class="table table-bordered tabpos">
                     <thead>
                         <tr>
                             <th>Train Name</th>
                             <th>Train Number</th>
                             <th>Date Of Journey</th>
                             <th>Chart Prepared</th>
-                            
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Board</th>
+                            <th>Class</th>
+                            <th>Reservation till</th>
+
                         </tr>
                     </thead>
                     <tbody class="table-striped">
@@ -28,22 +33,15 @@
                             <td>${fieldValue(bean: mInstance, field: "trainNo")}</td>
                             <td>${fieldValue(bean: mInstance, field: "doj")}</td>
                             <td>${fieldValue(bean: mInstance, field: "chartPrepared")}</td>
-                        </tr>
-                        <tr>
-                            <td><b>From Station</b></td><td>${fieldValue(bean: mInstance, field: "fromStation")}</td>
-                            <td><b>To Station</b></td><td>${fieldValue(bean: mInstance, field: "toStation")}</td>
-                        </tr>
-                        <tr>
-                        	<td><b>Boarding Point</b></td><td>${fieldValue(bean: mInstance, field: "boardCode")}</td>
-                             <td><b>Class</b></td><td>${fieldValue(bean: mInstance, field: "cls")}</td>
-                        </tr>
-                        <tr>
-                        	<td><b>Reservation UpTo Code</b></td><td>${fieldValue(bean: mInstance, field: "resupCode")}</td>
-                          	<td><b>Reservation UpTo Name</b></td><td>${fieldValue(bean: mInstance, field: "resupName")}</td>
+                            <td>${fieldValue(bean: mInstance, field: "fromStation")}</td>
+                            <td>${fieldValue(bean: mInstance, field: "toStation")}</td>
+                            <td>${fieldValue(bean: mInstance, field: "boardCode")}</td>
+                            <td>${fieldValue(bean: mInstance, field: "cls")}</td>
+                            <td>${fieldValue(bean: mInstance, field: "resupName")}</td>
                         </tr>
                         <%--<tr>
                         	<td><b>Chart Prepared</b></td><td>${fieldValue(bean: mInstance, field: "chartPrepared")}</td>
-                        </tr>   
+                        </tr>
                     --%></g:each>
                     </tbody>
                     <%--
@@ -53,7 +51,7 @@
        <br/>
       <center> <h3 style="color:#abbf78"></h3></center>
         <div class="list">
-                <table class="table table-striped">
+                <table class="table table-bordered tabpos">
                     <thead>
                         <tr>
                             <th>SNO</th>
@@ -67,11 +65,11 @@
                             <td>${fieldValue(bean: mInst, field: "sr")}</td>
                             <td>${fieldValue(bean: mInst, field: "bStatus")}</td>
                             <td>${fieldValue(bean: mInst, field: "cStatus")}</td>
-                           
+
                         </tr>
                     </g:each>
                     </tbody>
-                    
+
                 </table>
             </div>
     </g:if>
@@ -89,6 +87,6 @@
 </g:if>
 
 <g:else>
-<div class="alert alert-warning" role="alert">Enter complete pnr in a valid format</div>
+%{--<div class="alert alert-warning" role="alert">Enter complete pnr in a valid format</div>--}%
 </g:else>
 
