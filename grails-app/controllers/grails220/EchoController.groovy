@@ -11,17 +11,20 @@ class EchoController {
 
     }
 
+    def index1(){
+    }
+
     def pnr(){
 
     }
 
 
-    def checkpnr(String rf){
+    def checkpnr(){
         PnrData data = new PnrData();
         //def message = params.value;
-        def message = rf;
+        def message = params.rf;
         String isParsed = null;
-
+         println message;
         if(message.trim().length() == 10){
 
             isParsed = "YES";
@@ -32,35 +35,9 @@ class EchoController {
 
             System.out.println("HMAC=================="+hmac+" PNR JSON================"+str);
 
-            data = parseXmlToVO(str);
 
-            log.info("=============is pnr data"+data.toString());
-            System.out.println("=============is pnr data"+data.toString()+"==========");
-
-
-
-            PnrData pd = new PnrData();
-            if(data.error.equals("")){
-                pd.responseCode = data.responseCode;
-                pd.trainName = data.trainName;
-                pd.trainNo = data.trainNo;
-                pd.passengers = data.passengers;
-                pd.doj = data.doj;
-                pd.fromCode = data.fromCode;
-                pd.fromStation = data.fromStation
-                pd.toCode = data.toCode;
-                pd.toStation = data.toStation;
-                pd.chartPrepared = data.chartPrepared;
-                pd.boardCode = data.boardCode;
-                pd.cls = data.cls;
-                pd.resupCode = data.resupCode;
-                pd.resupName  = data.resupName;
-            }else{
-                pd.error = data.error;
-            }
-
-
-            render(template:'diff', model:[searchresults:pd,sr:pd.passengers,er:pd.error,parsed:isParsed])
+           // render(template:'diff', model:[searchresults:pd,sr:pd.passengers,er:pd.error,parsed:isParsed])
+            render str;
 
         }
         if(message.trim().length()!=10){
@@ -73,9 +50,8 @@ class EchoController {
 
 
     def String getHmac(String pnr){
-        String mykey = "your secret key";
-        String pubapiKey ="your pub api key"
-        String test = "json"+pubapiKey+pnr;
+        String mykey = "34b16a158402a9caf50480c885cf07f3";
+        String test = "json2b965b0cdcc51fd64cf77224165c43e8"+pnr;
         StringBuffer sb = new StringBuffer();
         try {
             Mac mac = Mac.getInstance("HmacSHA1");
@@ -96,18 +72,18 @@ class EchoController {
     }
 
     def  String getPnrResponse(String pnr,String pnrHmac) {
-			String apiKey="your pub api key";
-        //More validations can be added like format is one of xml or json.
-        String endpoint = "http://railpnrapi.com/api/check_pnr/pnr/"+pnr+"/format/xml/pbapikey/"+apiKey+"/pbapisign/"+pnrHmac;
 
-        log.info("=============is endpoint"+endpoint);
+        //More validations can be added like format is one of xml or json.
+        String endpoint = "http://railpnrapi.com/api/check_pnr/pnr/"+pnr+"/format/json/pbapikey/2b965b0cdcc51fd64cf77224165c43e8/pbapisign/"+pnrHmac;
+        //String endpoint = "http://railpnrapi.com/api/check_pnr/pnr/4102692788/format/json/pbapikey/2b965b0cdcc51fd64cf77224165c43e8/pbapisign/25ce144d5d0d3d1420a0b2afcd24f3f34deb1575";
+        println "=============is endpoint"+endpoint;
         System.out.println("=============is endpoint"+endpoint);
         System.out.println(endpoint);
         HttpURLConnection request = null;
         BufferedReader rd = null;
         StringBuilder response = null;
-
         try{
+
             URL endpointUrl = new URL(endpoint);
             request = (HttpURLConnection)endpointUrl.openConnection();
             request.setRequestMethod("GET");
@@ -119,29 +95,10 @@ class EchoController {
             while ((line = rd.readLine()) != null){
                 response.append(line + "\n");
             }
-        } catch (MalformedURLException e) {
-            System.out.println("Exception: " + e.getMessage());
-        } catch (ProtocolException e) {
-            System.out.println("Exception: " + e.getMessage());
-        } catch (IOException e) {
-            System.out.println("Exception: " + e.getMessage());
         } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
-        } finally {
-            try{
-                request.disconnect();
-            } catch(Exception e){
-            }
-
-            if(rd != null){
-                try{
-                    rd.close();
-                } catch(IOException ex){
-                }
-                rd = null;
-            }
         }
-
+          println "response is"+response;
         return response != null ? response.toString() : "No Response";
     }
 
