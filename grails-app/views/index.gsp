@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/styles.css"/>
     <g:javascript library="jquery"/>
      <link rel="stylesheet" href="css/table.css"/>
+    <link rel="stylesheet" href="css/css-tricks.css"/>
 
 </head>
 

@@ -1,3 +1,4 @@
+/*
 * {
     margin: 0;
     padding: 0;
@@ -12,16 +13,23 @@ p {
     margin: 20px 0;
 }
 
+*/
 /*
 Generic Styling, for Desktops/Laptops
-*/
+*//*
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
-/* Zebra striping */
+*/
+/* Zebra striping *//*
+
 tr:nth-of-type(odd) {
     background: #eee;
+}
+tr:nth-of-type(even) {
+    background: silver;
 }
 th {
     background: #333;
@@ -32,4 +40,12 @@ td, th {
     padding: 6px;
     border: 1px solid #ccc;
     text-align: left;
+}*/
+
+
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+tr:nth-of-type(even) {
+    background: silver;
 }

@@ -46,7 +46,7 @@ app.controller('TrainsController', function($http,$scope) {
     }
 
     $scope.updateQuota = function (qt) {
-        console.log("raido"+qt);
+
         $scope.quota=qt;
 
     }
@@ -66,7 +66,7 @@ app.controller('TrainsController', function($http,$scope) {
         responsePromise.success(function(data)
         {
             $scope.seats = data; // response data
-            console.log($scope.seats);
+
             $scope.showLoader="N";
         });
         }
@@ -93,7 +93,6 @@ app.controller('TrainsController', function($http,$scope) {
         $scope.tscode = $scope.parseStation(to).toLowerCase();;
         $scope.jdate = $scope.convertDateFormat(doj);
 
-        console.log($scope.quota)
 
         var responsePromise =$http({method: 'POST', url: 'http://checkpnr.herokuapp.com/trains/trainsBetweenStationsService',params:{from:$scope.fscode,to:$scope.tscode,doj:$scope.jdate}});
         responsePromise.success(function(data)
