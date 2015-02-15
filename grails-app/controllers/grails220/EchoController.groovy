@@ -50,8 +50,8 @@ class EchoController {
 
 
     def String getHmac(String pnr){
-        String mykey = "34b16a158402a9caf50480c885cf07f3";
-        String test = "json2b965b0cdcc51fd64cf77224165c43e8"+pnr;
+        String mykey = "privatekey";
+        String test = "jsonpubapikey"+pnr;
         StringBuffer sb = new StringBuffer();
         try {
             Mac mac = Mac.getInstance("HmacSHA1");

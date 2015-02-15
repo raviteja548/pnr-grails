@@ -15,7 +15,7 @@ class TrainsController {
         def from = params.from;
         def to = params.to;
         def doj = params.doj;
-        String pbapikey = "2b965b0cdcc51fd64cf77224165c43e8";
+        String pbapikey = "public key";
         String hmac = getHmacForTrainsBwStations(from,to,doj);
         System.out.println(from+to+doj);
         String endpoint = "http://railpnrapi.com/api/trains_between_stations/fscode/"+from+"/tscode/"+to+"/date/"+doj+"/orderby/time/format/json/pbapikey/"+pbapikey+"/pbapisign/"+hmac;
@@ -37,7 +37,7 @@ class TrainsController {
             quota="gn";
         }
 
-        String pubapiKey ="2b965b0cdcc51fd64cf77224165c43e8";
+        String pubapiKey ="publickey";
         String hmacString = getHmacForSeatAvailability(tnum,from.toLowerCase(),to.toLowerCase(),doj,clazz.toLowerCase(),quota.toLowerCase(),format);
         println hmacString;
         String endpoint   =  "http://railpnrapi.com/api/check_avail/tnum/"+tnum+"/fscode/"+from+"/tscode/"+to+"/date/"+doj+"/class/"+clazz.toUpperCase()+"/quota/"+quota.toUpperCase()+"/format/"+format+"/pbapikey/"+pubapiKey+"/pbapisign/"+hmacString;
@@ -48,8 +48,8 @@ println endpoint;
 
     String getHmacForTrainsBwStations(String from,String to,String doj){
         // order is clazz dateJ format fscode orderby pbapikey tscode
-        String mykey = "34b16a158402a9caf50480c885cf07f3";
-        String pubapiKey ="2b965b0cdcc51fd64cf77224165c43e8";
+        String mykey = "privatekey";
+        String pubapiKey ="publickey";
         String test = doj+"json"+""+from+"time"+""+pubapiKey+""+to;
         StringBuffer sb = new StringBuffer();
         try {
@@ -72,8 +72,8 @@ println endpoint;
 
     String getHmacForSeatAvailability(String tnum,String fscode,String tscode,String doj,String clazz,String quota,String format){
         // order is clazz dateJ format fscode orderby pbapikey tscode
-        String mykey = "34b16a158402a9caf50480c885cf07f3";
-        String pubapiKey ="2b965b0cdcc51fd64cf77224165c43e8";
+        String mykey = "privatekey";
+        String pubapiKey ="public key";
         String test = clazz+""+doj+""+format+""+fscode+""+pubapiKey+""+quota+""+tnum+""+tscode;
         StringBuffer sb = new StringBuffer();
         try {
